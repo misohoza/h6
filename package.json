@@ -1,8 +1,8 @@
--{
+{
     "name": "h6-snippets",
     "displayName": "H6 Snippets",
     "description": "Halion 6 Lua Snippets",
-    "version": "1.6.3",
+    "version": "1.6.5",
     "publisher": "michalhoza",
     "engines": {
         "vscode": "^1.18.0"
