@@ -1,0 +1,1007 @@
+{
+	//Halion functions
+	//Optional arguments are left out
+	"addLayerPassword":{
+		"prefix": "addLayerPassword()",
+		"body": ["addLayerPassword(${1:pwd})"],
+		"description": "Add layer password"
+	},
+
+	"addQCAssignment":{
+		"prefix": "addQCAssignment()",
+		"body": ["addQCAssignment(${1:qc},${2:element},${3:nameOrId},${4:scope})"],
+		"description": "Add QC assignment"
+	},
+
+	"afterTouch":{
+		"prefix": "afterTouch()",
+		"body": ["afterTouch(${1:value})"],
+		"description": "Function to generate channel aftertouch events."
+	},
+
+	"appendBus":{
+		"prefix": "appendBus()",
+		"body": ["appendBus(${1:bus})"],
+		"description": "Add a bus in the specified destination layer"
+	},
+
+	"appendEffect":{
+		"prefix": "appenEffect()",
+		"body": ["appendEffect(${1:effect})"],
+		"description": "Add an effect to specified destination bus"
+	},
+
+	"appendLayer":{
+		"prefix": "appendLayer()",
+		"body": ["appendLayer(${1:layer})"],
+		"description": "Add a layer to specified destination layer"
+	},
+
+	"appendLayerAsync":{
+		"prefix": "appendLayerAsync()",
+		"body": ["appendLayerAsync(${1:layer})"],
+		"description": "Add a layer to specified destination layer using separate, parallel thread. Optional argument:callback. Returns Load Progress object."
+	},
+
+	"appendMidiModule":{
+		"prefix": "appendMidiModule()",
+		"body": ["appendMidiModule(${1:module})"],
+		"description": "Add a midi module to specified destination layer"
+	},
+
+	"appendZone":{
+		"prefix": "appendZone()",
+		"body": ["appendZone(${1:zone})"],
+		"description": "Add a zone in specified destination layer"
+	},
+
+	"assignAutomation":{
+		"prefix": "assignAutomation()",
+		"body": ["assignAutomation(${1:element},${2:nameOrID})"],
+		"description": "Assign a parameter to an automation parameter. Optional argument:index"
+	},
+
+	"AudioFile.open":{
+		"prefix": "AudioFile.open()",
+		"body": ["AudioFile.open(${1:filename})"],
+		"description": "Creates an AudioFile object of the specified audio file"
+	},
+
+	"beats2ms":{
+		"prefix": "beats2ms()",
+		"body": ["beats2ms(${1:beats})"],
+		"description": "Convert a number of beats to equivalent duration in ms"
+	},
+
+	"calcModulation":{
+		"prefix": "calcModulation()",
+		"body": ["calcModulation()"],
+		"description": "Generate the modulation signal that has been defined with defineModulation()"
+	},
+
+	"changeNoteExpression":{
+		"prefix": "changeNoteExpression()",
+		"body": ["changeNoteExpression(${1:noteID},${2:type},${3:value})"],
+		"description": "Change note expression of a specific note. Optional arguments: relative, immediateOrDuration"
+	},
+
+	"changePan":{
+		"prefix": "changePan()",
+		"body": ["changePan(${1:noteID},${2:pan})"],
+		"description": "Change pan of specific note. Optional arguments: relative, immediateOrDuration"
+	},
+
+	"changeTune":{
+		"prefix": "changeTune()",
+		"body": ["changeTune(${1:noteID},${2:tune})"],
+		"description": "Change tuning of specific note in semitones. Optional arguments: relative, immediateOrDuration"
+	},
+
+	"changeVolume":{
+		"prefix": "changeVolume()",
+		"body": ["changeVolume(${1:noteID},${2:gain})"],
+		"description": "Change volume of specific note. Optional arguments: relative, immediateOrDuration"
+	},
+
+	"changeVolumedB":{
+		"prefix": "changeVolumedB()",
+		"body": ["changeVolume(${1:noteID},${2:gain_dB})"],
+		"description": "Change volume of specific note in decibels. Optional arguments: relative, immediateOrDuration"
+	},
+
+	"clone":{
+		"prefix": "clone()",
+		"body": ["clone(${1:event})"],
+		"description": "Create a copy of specified event"
+	},
+
+	"controlChange":{
+		"prefix": "controlChange()",
+		"body": ["controlChange(${1:controller},${2:value})"],
+		"description": "Generates controller events. Arguments:controller,value"
+	},
+
+	"defineModulation":{
+		"prefix": "defineModulation()",
+		"body": ["defineModulation(${1:name},${2:bipolar})"],
+		"description": "Declare a modulation output for the script module. Must be used with calcModulation()"
+	},
+
+	"defineParameter":{
+		"prefix": "defineParameter()",
+		"body": ["defineParameter($1)"],
+		"description": "Specify a parameter"
+	},
+
+	"defineSlotLocal":{
+		"prefix": "defineSlotLocal()",
+		"body": ["defineSlotLocal(${1:name})"],
+		"description": "Attain global variables that operate independently per slot"
+	},
+
+	"endUndoBlock":{
+		"prefix": "endUndoBlock()",
+		"body": ["endUndoBlock()"],
+		"description": "Terminate undo block"
+	},
+
+	"Event Constructor":{
+		"prefix": "Event()",
+		"body": ["Event(${1:eventType})"],
+		"description": "Create new event of specified type"
+	},
+
+	"fade":{
+		"prefix": "fade()",
+		"body": ["fade(${1:noteID},${2:startValue},${3:targetValue},${4:duration},${5:killVoice})"],
+		"description": "Fade the volume of specific note"
+	},
+
+	"findBusses":{
+		"prefix": "findBusses()",
+		"body": ["findBusses()"],
+		"description": "Find busses in specified Element object. Optional arguments: recursive, nameOrFilterFunction"
+	},
+
+	"findChildren":{
+		"prefix": "findChildren()",
+		"body": ["findChildren()"],
+		"description": "Find children in specified Element object. Optional arguments: recursive, nameOrFilterFunction"
+	},
+
+	"findEffects":{
+		"prefix": "findEffects()",
+		"body": ["findEffects()"],
+		"description": "Find effects in specified Element object. Optional arguments: recursive, nameOrFilterFunction"
+	},
+
+	"findLayers":{
+		"prefix": "findLayers()",
+		"body": ["findLayers()"],
+		"description": "Find layers in specified layer. Optional arguments: recursive, nameOrFilterFunction"
+	},
+
+	"findMidiModules":{
+		"prefix": "findMidiModules()",
+		"body": ["findMidiModules()"],
+		"description": "Find midi modules in specified layer. Optional arguments: recursive, nameOrFilterFunction"
+	},
+
+	"findSlots":{
+		"prefix": "findSlots()",
+		"body": ["findSlots()"],
+		"description": "Find slots of the plug-in instance. Optional arguments: nameOrFilterFunction"
+	},
+
+	"findZones":{
+		"prefix": "findZones()",
+		"body": ["findZones()"],
+		"description": "Find zones in the specified layer. Optional arguments: recursive, nameOrFilterFunction"
+	},
+
+	"forgetAutomation":{
+		"prefix": "forgetAutomation()",
+		"body": ["forgetAutomation(${1:element},${2:nameOrID})"],
+		"description": "Remove the specified parameter from its automation parameter"
+	},
+
+	"getAllocatedMemory":{
+		"prefix": "getAllocatedMemory()",
+		"body": ["getAllocatedMemory()"],
+		"description": "Returns number of bytes which have been allocated to the script in the memory"
+	},
+
+	"getAutomationIndex":{
+		"prefix": "getAutomationIndex()",
+		"body": ["getAutomationIndex(${1:element},${2:nameOrID})"],
+		"description": "Returns automation index of specified parameter"
+	},
+
+	"getBarDuration":{
+		"prefix": "getBarDuration()",
+		"body": ["getBarDuration()"],
+		"description": "Returns duration of one bar in ms"
+	},
+
+	"getBeatDuration":{
+		"prefix": "getBeatDuration()",
+		"body": ["getBeatDuration()"],
+		"description": "Returns duration of one beat in ms"
+	},
+
+	"getBeatTime":{
+		"prefix": "getBeatTime()",
+		"body": ["getBeatTime()"],
+		"description": "Returns position in song in number of beats."
+	},
+
+	"getBeatTimeInBar":{
+		"prefix": "getBeatTimeInBar()",
+		"body": ["getBeatTimeInBar()"],
+		"description": "Returns position in bar in number of beats. Beginning is 0"
+	},
+
+	"getBus":{
+		"prefix": "getBus()",
+		"body": ["getBus()"],
+		"description": "Returns a bus object. Optional arguments: nameOrPosition"
+	},
+
+	"getCC":{
+		"prefix": "getCC()",
+		"body": ["getCC(${1:controller})"],
+		"description": "Returns current value of controller specified by argument"
+	},
+
+	"getChild":{
+		"prefix": "getChild()",
+		"body": ["getChild()"],
+		"description": "Returns child object of specified element. Optional arguments: nameOrPosition"
+	},
+
+	"getContext":{
+		"prefix": "getContext()",
+		"body": ["getContext()"],
+		"description": "Returns a string with the name of the context in which the function is called."
+	},
+
+	"getDisplayString":{
+		"prefix": "getDisplayString()",
+		"body": ["getDisplayString(${1:value})"],
+		"description": "Returns the display string of the specified parameter and value."
+	},
+
+	"getEffect":{
+		"prefix": "getEffect()",
+		"body": ["getEffect()"],
+		"description": "Returns the Effect object of the found effect. Returns nil if no bus is found. Optional arguments: nameOrPosition"
+	},
+
+	"getElement":{
+		"prefix": "getElement()",
+		"body": ["getElement()"],
+		"description": "Returns the Element object of the element to which the macro page is attached. This function can only be called in an UI script."
+	},
+
+	"getFreeVoices":{
+		"prefix": "getFreeVoices()",
+		"body": ["getFreeVoices()"],
+		"description": "Returns the number of free voices of the plug-in instance"
+	},
+
+	"getHostName":{
+		"prefix": "getHostName()",
+		"body": ["getHostName()"],
+		"description": "Returns a string with the name of the host software"
+	},
+
+	"getHostVersion":{
+		"prefix": "getHostVersion()",
+		"body": ["getHostVersion()"],
+		"description": "Returns a string with the version of the host software."
+	},
+
+	"getKeyProperties":{
+		"prefix": "getKeyProperties()",
+		"body": ["getKeyProperties()"],
+		"description": "Returns the reference to the internal key properties array. Fields: .color, .tooltip, .drummap"
+	},
+
+	"getKeySwitches":{
+		"prefix": "getKeySwitches()",
+		"body": ["getKeySwitches()"],
+		"description": "Returns the internal key switch array. Fields are: .name, .keyMin, .keyMax, .keyRemapped"
+	},
+
+	"getLayer":{
+		"prefix": "getLayer()",
+		"body": ["getLayer()"],
+		"description": "Returns the Layer object of the found layer. Returns nil if no layer is found. Optional arguments: nameOrPosition"
+	},
+
+	"getMidiModule":{
+		"prefix": "getMidiModule()",
+		"body": ["getMidiModule()"],
+		"description": "Returns the MidiModule object of the found MIDI module. Returns nil if no MIDI module is found. Optional arguments: nameOrPosition"
+	},
+
+	"getModulationMatrixRow":{
+		"prefix": "getModulationMatrixRow()",
+		"body": ["getModulationMatrixRow(${1:number})"],
+		"description": "Returns  ModulationMatrixRow object of the specified modulation matrix row"
+	},
+
+	"getMsTime":{
+		"prefix": "getMsTime()",
+		"body": ["getMsTime()"],
+		"description": "When the host is in playback, the function returns a decimal with the milliseconds since the start of the song. The start of the song equals 0 ms. The function returns -1 if the host is not in playback."
+	},
+
+	"getNoteDuration":{
+		"prefix": "getNoteDuration()",
+		"body": ["getNoteDuration(${1:noteNumber})"],
+		"description": "Function to measure the time delta between the last note-on event of the specified note and the call of this function. Returns the time delta in milliseconds"
+	},
+
+	"getNoteExpression":{
+		"prefix": "getNoteExpression()",
+		"body": ["getNoteExpression(${1:noteID},${2:type})"],
+		"description": "Returns the current value of the note expression determined by the arguments. The function returns -1 if the value of the note expression has not been set yet."
+	},
+
+	"getNoteExpressionProperties":{
+		"prefix": "getNoteExpressionProperties()",
+		"body": ["getNoteExpressionProperties()"],
+		"description": "Returns the reference to the internal note expression properties array. Fields are: .name, .block"
+	},
+
+	"getNumQCAssignments":{
+		"prefix": "getNumQCAssignments()",
+		"body": ["getNumQCAssignments(${1:qc})"],
+		"description": "Returns the number of assignments of the specified layer and quick control."
+	},
+
+	"getOutputBus":{
+		"prefix": "getOutputBus()",
+		"body": ["getOutputBus()"],
+		"description": "Returns the Bus object of the currently assigned output bus or nil if the default routing is used."
+	},
+
+	"getParameter":{
+		"prefix": "getParameter()",
+		"body": ["getParameter(${1:nameOrID})"],
+		"description": "Returns the current value of the parameter or nil if the parameter doesn't exist."
+	},
+
+	"getParameterDefinition":{
+		"prefix": "getParameterDefinition()",
+		"body": ["getParameterDefinition(${1:nameOrID})"],
+		"description": "Returns the ParameterDefinition object for the specified parameter."
+	},
+
+	"getParameterNormalized":{
+		"prefix": "getParameterNormalized()",
+		"body": ["getParameterNormalized(${1:nameOrID})"],
+		"description": "Returns the current value of the parameter in the normalized range from 0 to 1.0 or nil if the parameter doesn't exist. If the parameter is not numeric, the function returns the same as getParameter"
+	},
+
+	"getPeak":{
+		"prefix": "getPeak()",
+		"body": ["getPeak(${1:start},${2:length},${3:rms})"],
+		"description": "Function to analyze the levels in an audio file. You specify the audio file with the AudioFile object that is returned by the AudioFile.open function. The arguments start and length define the range in the audio file to be analyzed. The rms argument determines whether the peak level or the RMS level of the specified range is returned."
+	},
+
+	"getProductName":{
+		"prefix": "getProductName()",
+		"body": ["getProductName()"],
+		"description": "Returns a string with the name of the plug-in."
+	},
+
+	"getProductVersion":{
+		"prefix": "getProductVersion()",
+		"body": ["getProductVersion()"],
+		"description": "Returns a string with the version of the plug-in."
+	},
+
+	"getProgram":{
+		"prefix": "getProgram()",
+		"body": ["getProgram(${1:index})"],
+		"description": "Returns the Program object of the program with the specified index."
+	},
+
+	"getQCAssignmentBypass":{
+		"prefix": "getQCAssignmentBypass()",
+		"body": ["getQCAssignmentBypass(${1:qc},${2:assignment})"],
+		"description": "Returns the bypass state of the specified quick control assignment as boolean value."
+	},
+
+	"getQCAssignmentCurve":{
+		"prefix": "getQCAssignmentCurve()",
+		"body": ["getQCAssignmentCurve(${1:qc},${2:assignment})"],
+		"description": "Returns the curve value of the specified quick control assignment."
+	},
+
+	"getQCAssignmentMax":{
+		"prefix": "getQCAssignmentMax()",
+		"body": ["getQCAssignmentMax(${1:qc},${2:assignment})"],
+		"description": "Returns the maximum value of the specified quick control assignment."
+	},
+
+	"getQCAssignmentMin":{
+		"prefix": "getQCAssignmentMin()",
+		"body": ["getQCAssignmentMin(${1:qc},${2:assignment})"],
+		"description": "Returns the minimum value of the specified quick control assignment."
+	},
+
+	"getQCAssignmentMode":{
+		"prefix": "getQCAssignmentMode()",
+		"body": ["getQCAssignmentMode(${1:qc},${2:assignment})"],
+		"description": "Returns the mode that is set for the specified quick control assignment as a number. The mode can be determined via names or indices. See Quick Control Assignment Modes for details."
+	},
+
+	"getQCAssignmentParamId":{
+		"prefix": "getQCAssignmentParamId()",
+		"body": ["getQCAssignmentParamId(${1:qc},${2:assignment})"],
+		"description": "Returns the parameter ID of the parameter connected to the specified quick control assignment."
+	},
+
+	"getQCAssignmentScope":{
+		"prefix": "getQCAssignmentScope()",
+		"body": ["getQCAssignmentScope(${1:qc},${2:assignment})"],
+		"description": "Returns the element object that is set as scope for the specified quick control assignment."
+	},
+
+	"getSamplingRate":{
+		"prefix": "getSamplingRate()",
+		"body": ["getSamplingRate()"],
+		"description": "Returns the sample rate of the host software in Hertz (i.e., samples per seconds)."
+	},
+
+	"getScriptExecTimeOut":{
+		"prefix": "getScriptExecTimeOut()",
+		"body": ["getScriptExecTimeOut()"],
+		"description": "Returns the duration of the script execution time-out in milliseconds either for the controller or the processor thread."
+	},
+
+	"getScriptVersion":{
+		"prefix": "getScriptVersion()",
+		"body": ["getScriptVersion()"],
+		"description": "Returns a string with the version of the script engine."
+	},
+
+	"getSlot":{
+		"prefix": "getSlot()",
+		"body": ["getSlot(${1:nameOrIndex})"],
+		"description": "Returns the Slot object of the found slot. Returns nil if no slot is found."
+	},
+
+	"getSlotIndex":{
+		"prefix": "getSlotIndex()",
+		"body": ["getSlotIndex()"],
+		"description": "Returns the index of the slot in which the program is loaded."
+	},
+
+	"getSource!":{
+		"prefix": "getSource1()",
+		"body": ["getSource1()"],
+		"description": "Function to retrieve the 1st modulation source of a row in the modulation matrix. The row is specified with the Zone object of the zone and the index of the modulation matrix row."
+	},
+
+	"getSource2":{
+		"prefix": "getSource2()",
+		"body": ["getSource2()"],
+		"description": "Function to retrieve the 2nd modulation source of a row in the modulation matrix. The row is specified with the Zone object of the zone and the index of the modulation matrix row."
+	},
+	
+	"getTempo":{
+		"prefix": "getTempo()",
+		"body": ["getTempo()"],
+		"description": "Returns the current tempo in beats per minute (BPM). If no tempo information is available, this function returns the value -1."
+	},
+
+	"getTime":{
+		"prefix": "getTime()",
+		"body": ["getTime()"],
+		"description": "Returns the time in milliseconds since the initialization of the script."
+	},
+
+	"getTimeSignature":{
+		"prefix": "getTimeSignature()",
+		"body": ["getTimeSignature()"],
+		"description": "Returns the numerator and denominator of the time signature. If no time signature information is available, the value -1 is returned for both the numerator and the denominator."
+	},
+
+	"getUsedMemory":{
+		"prefix": "getUsedMemory()",
+		"body": ["getUsedMemory()"],
+		"description": "Returns the number of bytes in the memory that are used by the script."
+	},
+
+	"getUsedVoices":{
+		"prefix": "getUsedVoices()",
+		"body": ["getUsedVoices()"],
+		"description": "Returns the number of used voices of the plug-in instance."
+	},
+
+	"getUsedVoicesOfSlot":{
+		"prefix": "getUsedVoicesOfSlot()",
+		"body": ["getUsedVoicesOfSlot()"],
+		"description": "Returns the number of used voices of the corresponding slot."
+	},
+
+	"getUserPresetPath":{
+		"prefix": "getUserPresetPath()",
+		"body": ["getUserPresetPath()"],
+		"description": "Function to obtain the file path for the user VST presets of a product. If no product argument is set, the function returns the file path of the current plug-in."
+	},
+
+	"getVoices":{
+		"prefix": "getVoices()",
+		"body": ["getVoices()"],
+		"description": "Returns the maximum number of voices of the plug-in instance."
+	},
+
+	"getZone":{
+		"prefix": "getZone()",
+		"body": ["getZone()"],
+		"description": "Returns the Zone object of the found zone. Returns nil if no zone is found. Optional arguments: nameOrPosition."
+	},
+
+	"hasParameter":{
+		"prefix": "hasParameter()",
+		"body": ["hasParameter(${1:nameOrID})"],
+		"description": "Function to check if a parameter exists. The parameter can be determined by name or ID."
+	},
+
+	"insertBus":{
+		"prefix": "insertBus()",
+		"body": ["insertBus(${1:bus},${2:position})"],
+		"description": "Function to insert a bus at the specified position in the destination layer."
+	},
+
+	"insertEffect":{
+		"prefix": "insertEffect()",
+		"body": ["insertEffect(${1:effect},${2:position})"],
+		"description": "Function to insert an effect at a specific position in a destination bus. "
+	},
+
+	"insertEnvelopePoint":{
+		"prefix": "insertEnvelopePoint()",
+		"body": ["insertEnvelopePoint(${1:envelopeArray},${2:index},${3:level},${4:duration},${5:curve})"],
+		"description": "Function to insert an envelope point in the specified envelope. "
+	},
+
+	"insertEvent":{
+		"prefix": "insertEvent()",
+		"body": ["insertEvent(${1:eventsTable},${2:event})"],
+		"description": "Function to insert an event in the specified events table according to its PPQ position. The events table is part of a tracks table which is part of the MIDI sequence table."
+	},
+
+	"insertLayer":{
+		"prefix": "insertLayer()",
+		"body": ["insertLayer(${1:layer},${2:position})"],
+		"description": "Function to insert a layer at a specific position in a destination layer"
+	},
+
+	"insertLayerAsync":{
+		"prefix": "insertLayerAsync()",
+		"body": ["insertLayerAsync(${1:layer},${2:position})"],
+		"description": "Function to insert a layer at a specified position in a destination layer using a separate, parallel thread. Inserting a layer in a separate thread can be necessary if the layer is too big to be inserted in a short time. The layer to be inserted and the destination layer are both determined by their Layer objects. You can use getLayer or findLayers to determine the layer to be inserted. For example, this.parent determines the parent layer of the script module as destination layer. The position is the number indexing the existing layers in the destination layer. The new layer will be inserted before the specified position. To add the layer at the end, use appendLayer or appendLayerAsync instead. The function returns a LoadProgress object that can be used to monitor the load progress. After the layer is inserted, the callback function is called. The callback function gets the LoadProgress object as default argument."
+	},
+
+	"insertMidiModule":{
+		"prefix": "insertMidiModule()",
+		"body": ["insertMidiModule(${1:module},${2:position})"],
+		"description": "Function to insert a MIDI module at the specified position in the determined destination layer. "
+	},
+
+	"insertZone":{
+		"prefix": "insertZone()",
+		"body": ["insertZone(${1:zone},${2:position})"],
+		"description": "Function to insert a zone at the specified position in the determined layer. "
+	},
+
+	"isKeyDown":{
+		"prefix": "isKeyDown()",
+		"body": ["isKeyDown(${1:note})"],
+		"description": "Function to detect whether a key with a specific note number is held or not."
+	},
+
+	"isNoteHeld":{
+		"prefix": "isNoteHeld()",
+		"body": ["isNoteHeld()"],
+		"description": "Function to detect inside the onNote callback function if a note is held or not. isNoteHeld is specific to the onNote callback function. Calling this function inside other callback functions is not permitted."
+	},
+
+	"isOctaveKeyDown":{
+		"prefix": "isOctaveKeyDown()",
+		"body": ["isOctaveKeyDown(${1:note})"],
+		"description": "Function to detect whether a key is held or not, regardless of the octave."
+	},
+
+	"isPlaying":{
+		"prefix": "isPlaying()",
+		"body": ["isPlaying()"],
+		"description": "Function to detect whether the host is in playback."
+	},
+
+	"loadPreset":{
+		"prefix": "loadPreset()",
+		"body": ["loadPreset(${1:path})"],
+		"description": "Function to load the elements of a VST preset."
+	},
+
+	"loadPresetAsync":{
+		"prefix": "loadPresetAsync()",
+		"body": ["loadPresetAsync(${1:path})"],
+		"description": "Function to load the elements of a VST preset in a separate, parallel thread. Loading the VST preset in a separate thread can be necessary if the preset is too big to be loaded in a short time. The function returns a LoadProgress object that can be used to get information on the load progress and the loaded elements, for example. After the preset is loaded, the callback function is called. The callback function gets the LoadProgress object as default argument."
+	},
+
+	"messageBox":{
+		"prefix": "messageBox()",
+		"body": ["messageBox(${1:stringOrConfigTable})"],
+		"description": "Function to open a modal message box. If the argument is a single string, the text will be displayed in the default message box. Alternatively, you can customize the message box by using a configuration table, e.g., if you want to display the text with a warning icon."
+	},
+
+	"ms2beat":{
+		"prefix": "ms2beat()",
+		"body": ["ms2beat(${1:ms})"],
+		"description": "Function to convert a duration in milliseconds to the equivalent number of beats. One beat equals a quarter note. The current tempo is taken into account."
+	},
+
+	"ms2samples":{
+		"prefix": "ms2samples()",
+		"body": ["ms2samples(${1:ms})"],
+		"description": "Function to convert a duration in milliseconds to the equivalent number of samples. The conversion takes into account the sample rate at which the plug-in runs."
+	},
+
+	"onafterTouch":{
+		"prefix": "onAfterTouch()",
+		"body": ["onAfterTouch(${1:event})"],
+		"description": "This callback function is called when the script module receives a channel aftertouch event."
+	},
+
+	"onController":{
+		"prefix": "onController()",
+		"body": ["onController(${1:event})"],
+		"description": "This callback function is called when the script module receives a continuous controller event. If the script doesn't implement onAfterTouch or onPitchBend, the respective aftertouch or pitch bend events will be passed on to onController. This way, continuous controller, aftertouch and pitch bend events can be treated in the same callback function onController."
+	},
+
+	"onInit":{
+		"prefix": "onInit()",
+		"body": ["onInit()"],
+		"description": "This callback function is called after executing any global statements and the onLoadIntoSlot callback function. It is the first callback function that is called when the processor thread is initialized. You can use this function to initialize variables with information from the context, for example."
+	},
+
+	"onLoad":{
+		"prefix": "onLoad()",
+		"body": ["onLoad(${1:data})"],
+		"description": "This callback function is called when the script module is loaded as part of a preset or project. The data that is passed on is the data that was returned by onSave when the script module was saved."
+	},
+
+	"onLoadIntoSlot":{
+		"prefix": "onLoadIntoSlot()",
+		"body": ["onLoadIntoSlot()"],
+		"description": "This callback function is called when the program is loaded into the Slot Rack. Any global statements are executed in advance. onInit is called after onLoadIntoSlot."
+	},
+
+	"onLoadSubPreset":{
+		"prefix": "onLoadSubPreset()",
+		"body": ["onLoadSubPreset(${1:section},${2:data})"],
+		"description": "This callback function is called when loading a subpreset with a corresponding Preset Browser template. The callback will only be called if the scope of the Preset Browser template is set correctly."
+	},
+
+	"onNote":{
+		"prefix": "onNote()",
+		"body": ["onNote(${1:event})"],
+		"description": "This callback function is called when the script module receives a note-on event."
+	},
+
+	"onNoteExpression":{
+		"prefix": "onNoteExpression()",
+		"body": ["onNoteExpression(${1:event})"],
+		"description": "This callback function is called when the script module receives a note expression event."
+	},
+
+	"onPitchBend":{
+		"prefix": "onPitchBend()",
+		"body": ["onPitchBend(${1:event})"],
+		"description": "This callback function is called when the script module receives a pitch bend event. The .value field of the Event object contains the pitch bend value as a signed integer in the range from -8191 to 8191. The .bend field contains the pitch bend value as a floating point number in the range from -1.0 to 1.0. Use .bend for greater accuracy."
+	},
+
+	"onRelease":{
+		"prefix": "onRelease()",
+		"body": ["onRelease(${1:event})"],
+		"description": "This callback function is called when the script module receives a note-off event."
+	},
+
+	"onRemoveFromSlot":{
+		"prefix": "onRemoveFromSlot()",
+		"body": ["onRemoveFromSlot()"],
+		"description": "This callback function is called when the program is removed from the Slot Rack. "
+	},
+
+	"onSave":{
+		"prefix": "onSave()",
+		"body": ["onSave()"],
+		"description": "This callback function is called when the script module is saved as part of a preset or project. The data you pass on to the return statement will be stored with the preset or project. The data can be of any type, but it is common practice to use a table that can easily be extended with more fields. When the script module is restored, the onLoad callback will receive the stored data."
+	},
+
+	"onSaveSubPreset":{
+		"prefix": "onSaveSubPreset()",
+		"body": ["onSaveSubPreset(${1:section})"],
+		"description": "This callback function is called when saving a subpreset with a corresponding Preset Browser template. The callback will only be called if the scope of the Preset Browser template is set correctly."
+	},
+
+	"onTriggerPad":{
+		"prefix": "onTriggerPad()",
+		"body": ["onTriggerPad(${1:number})"],
+		"description": "This callback function is called when the script module receives a trigger event from a trigger pad. The Trigger Pads module must be placed before the script module. Trigger events are produced when the pad is pressed with the mouse, when a trigger note is played via MIDI or by calling playTriggerPad from another script module."
+	},
+
+	"onUnhandledEvent":{
+		"prefix": "onUnhandledEvent()",
+		"body": ["onUnhandledEvent(${1:event})"],
+		"description": "This callback function is called when the script module receives an event that is not handled by the specific event callback functions, e.g., onNote, onRelease, onController and onNoteExpression. If none of the specific callback functions are defined, onUnhandledEvent will receive all incoming events."
+	},
+
+	"openURL":{
+		"prefix": "openURL()",
+		"body": ["openURL(${1:adress})"],
+		"description": "Function to open a  website in the web browser."
+	},
+
+	"pitchBend":{
+		"prefix": "pitchBend()",
+		"body": ["pitchBend(${1:value})"],
+		"description": "Function to generate pitch bend events. The pitch bend value in the range of -1.0 to 1.0."
+	},
+
+	"playNote":{
+		"prefix": "playNote()",
+		"body": ["playNote(${1:note},${2:velocity})"],
+		"description": "Function to generate note events. Optional arguments: duration, layerOrZone, volume, pan, tune."
+	},
+
+	"playTriggerPad":{
+		"prefix": "playTriggerPad()",
+		"body": ["playTriggerPad(${1:number})"],
+		"description": "Function to send the trigger events of the Trigger Pads to subsequent modules of the script module."
+	},
+
+	"postEvent":{
+		"prefix": "postEvent()",
+		"body": ["postEvent(${1:event})"],
+		"description": "Function to post the event to the engine. The second argument is optional. It allows you to delay the event by a specific time in milliseconds."
+	},
+
+	"printRaw":{
+		"prefix": "printRaw()",
+		"body": ["printRaw(${1:value1},${2:value2},${3:...})"],
+		"description": "Receives any number of arguments and prints their values to the output window of the script module. In contrast to Lua's print function, printRaw does not insert a space character after every value and does not add a line feed on the end."
+	},
+
+	"readMidiFile":{
+		"prefix": "readMidiFile()",
+		"body": ["readMidiFile(${1:path})"],
+		"description": "Function to read a MIDI file (.mid). The function creates a MIDI sequence table that contains the data of the MIDI file. See MIDI Sequence Table for details on the fields of the MIDI sequence table."
+	},
+
+	"releaseVoice":{
+		"prefix": "releaseVoice()",
+		"body": ["releaseVoice(${1:noteID})"],
+		"description": "Function to release a note with a specific note ID."
+	},
+
+	"removeBus":{
+		"prefix": "removeBus()",
+		"body": ["removeBus(${1:busOrPosition})"],
+		"description": "Function to remove a bus from the specified layer. "
+	},
+
+	"removeEffect":{
+		"prefix": "removeEffect()",
+		"body": ["removeEffect(${1:effectOrPosition})"],
+		"description": "Function to remove an effect from a bus. "
+	},
+
+	"removeEnvelopePoint":{
+		"prefix": "removeEnvelopePoint()",
+		"body": ["removeEnvelopePoint(${1:envelopeArray},${2:index})"],
+		"description": "Function to remove an envelope point from the specified envelope. "
+	},
+
+	"removeFromParent":{
+		"prefix": "removeFromParent()",
+		"body": ["removeFromParent()"],
+		"description": "Function to remove an element in the Program Tree from the parent element. "
+	},
+
+	"removeLayer":{
+		"prefix": "removeLayer()",
+		"body": ["removeLayer(${1:layerOrPosition})"],
+		"description": "Function to remove a layer from the specified layer."
+	},
+
+	"removeMidiModule":{
+		"prefix": "removeMidiModule()",
+		"body": ["removeMidiModule(${1:moduleOrPosition})"],
+		"description": "Function to remove a MIDI module from the specified layer."
+	},
+
+	"removeQCAssignment":{
+		"prefix": "removeQCAssignment()",
+		"body": ["removeQCAssignment(${1:qc},${2:assignment})"],
+		"description": "Function to remove a quick control assignment from the specified layer and quick control."
+	},
+
+	"removeZone":{
+		"prefix": "removeZone()",
+		"body": ["removeZone(${1:zoneOrPosition})"],
+		"description": "Function to remove a zone from the specified layer."
+	},
+
+	"runAsync":{
+		"prefix": "runAsync()",
+		"body": ["runAsync(${1:func})"],
+		"description": "Executes a function in the controller thread. By calling runAsync in the processor thread, you can invoke a function that is executed in the controller thread. The execution of runAsync takes at least one audio block, or longer, depending on the function which was called. The callback which called runAsync is put on hold until the function has completed. Optional arguments: arguments of the function to be called."
+	},
+
+	"samples2ms":{
+		"prefix": "samples2ms()",
+		"body": ["samples2ms(${1:samples})"],
+		"description": "Function to convert a number of samples to the equivalent duration in milliseconds. The sample rate at which the plug-in runs is taken into account."
+	},
+
+	"setName":{
+		"prefix": "setName()",
+		"body": ["setName(${1:name})"],
+		"description": "Function to change the name of an element in the Program Tree."
+	},
+
+	"setOutputBus":{
+		"prefix": "setOutputBus()",
+		"body": ["setOutputBus(${1:bus})"],
+		"description": "Function to assign the output of a zone or bus to the specified output bus. The sending zone or bus is determined by its Element object. The receiving output bus is specified by its Bus object. Setting the output bus to nil enables the default signal routing for the zone or bus."
+	},
+
+	"setParameter":{
+		"prefix": "setParameter()",
+		"body": ["setParameter(${1:nameOrID},${2:value})"],
+		"description": "Function to set the value of a parameter. The parameter can be determined by name or ID. The function will have no effect if the parameter does not exist."
+	},
+
+	"setParameterNormalized":{
+		"prefix": "setParameterNormalized()",
+		"body": ["setParameterNormalized(${1:nameOrID},${2:value})"],
+		"description": "Function to set the value of a parameter in the normalized range from 0 to 1.0. The parameter can be determined by name or ID. This function has no effect if the parameter does not exist or if the value is of the type string."
+	},
+
+	"setProgram":{
+		"prefix": "setProgram()",
+		"body": ["setProgram(${1:programOrNil},${2:indexOptional})"],
+		"description": "Function to set a program in the specified slot of the Program Table or the Slot Rack of the plug-in instance. Before calling this function, you must access the Instance object with this.program.instance. The program is determined by its Program object. To specify the slot in the Program Table, you must use the index argument. To specify the slot in the Slot Rack, you must use a Slot object, for example, via getSlot. The program can be removed from the Slot Rack by using nil as argument."
+	},
+
+	"setQCAssignmentBypass":{
+		"prefix": "setQCAssignmentBypass()",
+		"body": ["setQCAssignmentBypass(${1:qc},${2:assignment},${3:bypass})"],
+		"description": "Function to set the bypass state of the specified quick control assignment."
+	},
+
+	"setQCAssignmentCurve":{
+		"prefix": "setQCAssignmentCurve()",
+		"body": ["setQCAssignmentCurve(${1:qc},${2:assignment},${3:curve})"],
+		"description": "Function to set the curve value of the specified quick control assignment."
+	},
+
+	"setQCAssignmentMax":{
+		"prefix": "setQCAssignmentMax()",
+		"body": ["setQCAssignmentMax(${1:qc},${2:assignment},${3:max})"],
+		"description": "Function to set the maximum value of the specified quick control assignment."
+	},
+
+	"setQCAssignmentMin":{
+		"prefix": "setQCAssignmentMin()",
+		"body": ["setQCAssignmentMin(${1:qc},${2:assignment},${3:min})"],
+		"description": "Function to set the minimum value of the specified quick control assignment."
+	},
+
+	"setQCAssignmentMode":{
+		"prefix": "setQCAssignmentMode()",
+		"body": ["setQCAssignmentMode(${1:qc},${2:assignment},${3:mode})"],
+		"description": "Function to set the mode of the specified quick control assignment."
+	},
+
+	"setQCAssignmentParamId":{
+		"prefix": "setQCAssignmentParamId()",
+		"body": ["setQCAssignmentParamId(${1:qc},${2:assignment},${3:paramId})"],
+		"description": "Function to set the parameter ID for connecting the corresponding parameter to the specified quick control assignment."
+	},
+
+	"setQCAssignmentScope":{
+		"prefix": "setQCAssignmentScope()",
+		"body": ["setQCAssignmentScope(${1:qc},${2:assignment},${3:scope})"],
+		"description": "Function to set the scope of the specified quick control assignment."
+	},
+
+	"setScriptExecTimeOut":{
+		"prefix": "setScriptExecTimeOut()",
+		"body": ["setScriptExecTimeOut(${1:duration})"],
+		"description": "Function to specify the maximum allowed execution time of a function call in the script. If the execution of a function call exceeds the execution time-out, the script will end with an execution error. "
+	},
+
+	"setSource1":{
+		"prefix": "setSource1()",
+		"body": ["setSource1(${1:source})"],
+		"description": "Function to set the 1st modulation source of a row in the modulation matrix. Optional arguments: sourceInfo1, sourceInfo2."
+	},
+
+	"setSource2":{
+		"prefix": "setSource2()",
+		"body": ["setSource2(${1:source})"],
+		"description": "Function to set the 2nd modulation source of a row in the modulation matrix. Optional arguments: sourceInfo1, sourceInfo2."
+	},
+
+	"sortEvents":{
+		"prefix": "sortEvents()",
+		"body": ["sortEvents(${1:eventsTable})"],
+		"description": "Function to sort the events of the specified events table according to their PPQ position. The function sorts the events from first to last PPQ position. The events table is part of a tracks table which is part of the MIDI sequence table. See MIDI Sequence Table for details."
+	},
+
+	"spawn":{
+		"prefix": "spawn()",
+		"body": ["spawn(${1:func})"],
+		"description": "Calls a Lua function and executes it in a separate, parallel thread. Optional arguments: arguments of a function to be called."
+	},
+
+	"startUndoBlock":{
+		"prefix": "startUndoBlock()",
+		"body": ["startUndoBlock(${1:name})"],
+		"description": "Function to combine multiple undo entries into one undo block. For example, if your script inserts several elements into the program, you might want to be able to remove all the elements in one single undo operation. This function must be terminated using endUndoBlock."
+	},
+
+	"wait":{
+		"prefix": "wait()",
+		"body": ["wait(${1:ms})"],
+		"description": "Function to suspend the execution of a callback for a specific time in milliseconds."
+	},
+
+	"waitBeat":{
+		"prefix": "waitBeat()",
+		"body": ["waitBeat(${1:beats})"],
+		"description": "Function to suspend the execution of a callback for a specific time. This time is specified in number of beats. One beat equals the length of a quarter note based on the current tempo."
+	},
+
+	"waitForRelease":{
+		"prefix": "waitForRelease()",
+		"body": ["waitForRelease()"],
+		"description": "Function to suspend the execution of the onNote callback until the note that called onNote gets released either by a corresponding note-off or sustain pedal off."
+	},
+
+	"writeMidiFile":{
+		"prefix": "writeMidiFile",
+		"body": ["writeMidiFile(${1:path},${2:midiSequence})"],
+		"description": "Function to write a MIDI file (.mid) to disk."
+	},
+
+	//Modulation Sources and Destinations
+	"ModulationSource":{
+		"prefix": "ModulationSource.",
+		"body": ["ModulationSource.${1|unassigned,lfo1,lfo2,ampEnv,filterEnv,pitchEnv,userEnv,stepMod,glide,keyFollow,noteOnVelocity,noteOnVelocitySquared,noteOnVelocityNormalized,noteOffVelocity,pitchBend,modWheel,aftertouch,midiControl,quickControl,modulationModule,noteExpression,noise,output,bus1,bus2,bus3,bus4,bus5,bus6,bus7,bus8,bus9,bus10,bus11,bus12,bus13,bus14,bus15,bus16,sampleAndHold|}"],
+		"description": "Modulation Source Types"
+	},
+
+	"ModulationDestination":{
+		"prefix": "ModulationDestination.",
+		"body": ["ModulationDestination.${1|unassigned,pitch,cutoff,resonance,distortion,morphX,morphY,cutoffOffset,resonanceOffset,level,volume1,volume2,pan,sampleStart,speedFactor,formantShift,grainPosition,grainDirection,grainDuration,grainLength,grainPitch,grainFormant,grainLevel,osc1Pitch,osc1Level,osc1Waveform,osc1MultiDetune,osc1MultiPan,osc1MultiVoices,osc2Pitch,osc2Level,osc2Waveform,osc2MultiDetune,osc2MultiPan,osc2MultiVoices,osc3Pitch,osc3Level,osc3Waveform,osc3MultiDetune,osc3MultiPan,osc3MultiVoices,subOscLevel,ringModLevel,noiseLevel,lfo1Freq,lfo1Shape,lfo2Freq,lfo2Shape,ampEnvAttack,ampEnvDecay,ampEnvSustain,ampEnvRelease,filterEnvAttack,filterEnvDecay,filterEnvSustain,filterEnvRelease,pitchEnvStartLev,pitchEnvAttack,pitchEnvAttLev,pitchEnvDecay,pitchEnvSustain,pitchEnvRelease,pitchEnvRelLev,userEnvStartLev,userEnvAttack,userEnvAttLev,userEnvDecay,userEnvSustain,userEnvRelease,userEnvRelLev,stepModFreq,stepModSlope,bus1,bus2,bus3,bus4,bus5,bus6,bus7,bus8,bus9,bus10,bus11,bus12,bus13,bus14,bus15,bus16,audioIn,wavetable1Pitch,wavetable1Level,wavetable1Pan,wavetable1MultiDetune,wavetable1MultiPan,wavetable1MultiSpread,wavetable1MultiVoices,wavetable1Pos,wavetable1Dir,wavetable1Speed,wavetable2Pitch,wavetable2Level,wavetable2Pan,wavetable2MultiDetune,wavetable2MultiPan,wavetable2MultiSpread,wavetable2MultiVoices,wavetable2Pos,wavetable2Dir,wavetable2Speed,wavetableSubPitch,wavetableSubLevel,wavetableSubPan,wavetableNoiseSpeed,wavetableNoiseLevel,wavetableNoisePan,wavetable1FormantShift,wavetable2FormantShift|}"],
+		"description": "Modulation Destination Types"
+	},
+
+	//Event Types
+	"EventType":{
+		"prefix": "EventType.",
+		"body": ["EventType.${1|noteOn,noteOff,controller,noteExpression,programChange|}"],
+		"description": "Event Type names."
+	}
+}
